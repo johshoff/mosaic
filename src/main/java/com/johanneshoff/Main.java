@@ -49,7 +49,7 @@ public class Main {
 
         List<String> files = new ArrayList<>();
 
-        File folder = new File(".");
+        File folder = new File(System.getProperty("imagepath", "."));
         for (File file : folder.listFiles()) {
             if (file.isFile() && file.getName().endsWith(".png")) {
                 files.add(file.getName());
